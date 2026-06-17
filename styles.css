@@ -295,6 +295,8 @@ a:hover { text-decoration: underline; }
 
 /* ---------- brand wordmark / logo img ---------- */
 .logo-img { height: 30px; width: auto; display: block; }
+/* cassette artwork used as the header logo — taller + framed so it reads */
+.logo-img--cassette { height: 44px; border: 1.5px solid var(--border); border-radius: var(--r-sm); }
 .app-icon-img { width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid var(--border); }
 
 /* ---------- device frame (holds a real screenshot) ---------- */
@@ -349,7 +351,7 @@ a:hover { text-decoration: underline; }
 }
 .store-btn:hover { text-decoration: none; box-shadow: var(--shadow-lg); }
 .store-btn:active { transform: translateY(1px); box-shadow: var(--inset); }
-.store-btn svg { width: 25px; height: 25px; fill: currentColor; flex-shrink: 0; }
+.store-btn svg { width: 26px; height: 26px; fill: currentColor; flex-shrink: 0; }
 .store-btn__txt { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
 .store-btn__txt small {
   font-family: var(--font-body); font-weight: 600; font-size: 10px;
@@ -359,6 +361,14 @@ a:hover { text-decoration: underline; }
 /* colorful variants */
 .store-btn--orange { background: var(--bs-orange); color: #fff; }
 .store-btn--teal   { background: var(--bs-teal);   color: #14323A; }
+
+/* nav "Download" button — hidden until you scroll past the hero download buttons */
+.nav__download {
+  min-height: 40px; padding: 9px 18px; font-size: 14px;
+  opacity: 0; visibility: hidden; transform: translateY(-4px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.nav__download.is-visible { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
 
 /* ---------- cassette logo (the splash artwork) ---------- */
 .cassette {
@@ -373,10 +383,10 @@ a:hover { text-decoration: underline; }
 .container { position: relative; z-index: 1; }
 .deco {
   position: absolute; z-index: 0; pointer-events: none; user-select: none;
-  width: 76px; height: auto; opacity: 0.12;
+  width: 110px; height: auto; opacity: 0.16;
 }
-.deco--lg { width: 120px; opacity: 0.10; }
-.deco--sm { width: 56px; }
+.deco--lg { width: 200px; opacity: 0.18; }
+.deco--sm { width: 78px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
