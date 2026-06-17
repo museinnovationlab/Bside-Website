@@ -341,7 +341,9 @@ a:hover { text-decoration: underline; }
 .line-icon { stroke: var(--bs-ink); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ---------- app-store download buttons ---------- */
-.store-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+/* scroll-margin-top offsets the sticky header so the in-page "Download" link
+   lands ABOVE the buttons (showing them fully), not behind the header. */
+.store-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; scroll-margin-top: 120px; }
 .store-btn {
   display: inline-flex; align-items: center; gap: 11px;
   color: #fff; /* overridden per-variant */
