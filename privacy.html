@@ -9,95 +9,98 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/app-icon-ios.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon-ios.png" />
 </head>
 <body>
 
   <header class="nav">
     <div class="container nav__inner">
-      <a class="wordmark" href="index.html"><span class="wordmark__badge">B</span>B-Side</a>
+      <a class="wordmark" href="index.html"><img class="logo-img logo-img--cassette" src="assets/splash-logo.png" alt="B-Side" /></a>
       <nav class="nav__links">
-        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#radar">The Radar</a>
+        <a href="index.html#best-of">Best of Lists</a>
         <a href="index.html#faq">FAQ</a>
-        <a href="terms.html">Terms</a>
       </nav>
-      <a class="btn btn--primary" href="index.html#waitlist">Get early access</a>
+      <a class="btn btn--primary" href="index.html#get-the-app" style="min-height:40px;padding:9px 18px;font-size:14px;">Download</a>
     </div>
   </header>
 
   <main class="legal">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <p class="legal__updated">Last updated: <span class="placeholder">[EFFECTIVE DATE]</span></p>
+    <p class="legal__updated">Last updated: June 17, 2026</p>
 
-    <div class="legal__draft">
-      ⚠️ <strong>Draft for review.</strong> This is a first-pass template, not legal advice. Have a
-      lawyer review it before launch and fill in every <span class="placeholder">[bracketed]</span>
-      value (legal entity, address, jurisdiction, contact email, pricing, data-retention periods).
-    </div>
-
-    <p>B-Side ("<strong>B-Side</strong>," "we," "us," or "our"), operated by <span class="placeholder">[Berkeley Labs / legal entity name]</span>, provides a music-discovery application (the "<strong>Service</strong>"). This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using the Service you agree to this Policy.</p>
+    <p>B-Side ("<strong>B-Side</strong>," "we," "us," or "our") is a music-discovery app operated by <strong>Berkeley Labs LLC</strong>. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using B-Side (the "Service"), you agree to this Policy.</p>
 
     <h2>1. Information we collect</h2>
     <h3>Information you provide</h3>
     <ul>
       <li><strong>Account information</strong> — your email address and authentication details when you create an account.</li>
-      <li><strong>Taste preferences</strong> — the artists, genres, and feedback (loved / fine / not for me) you give us to shape your recommendations.</li>
-      <li><strong>Support communications</strong> — anything you send us by email or in-app.</li>
+      <li><strong>Taste preferences</strong> — the artists and genres you choose, and the feedback you give recommendations (loved / fine / not for me), which we use to build your recommendations.</li>
+      <li><strong>Support communications</strong> — anything you send us by email or in the app.</li>
     </ul>
 
     <h3>Information from connected music services</h3>
-    <p>When you connect <strong>Spotify</strong>, <strong>Apple Music</strong>, or <strong>Last.fm</strong>, or upload your exported listening history, we access listening-related data such as your top artists, play history, and genres — solely to build your taste profile and recommendations. We request the minimum access needed, and you can disconnect a service at any time. Where applicable, third-party access tokens are stored securely and are not exposed to other users.</p>
+    <p>If you connect <strong>Spotify</strong>, <strong>Apple Music</strong>, or <strong>Last.fm</strong> — or upload your own exported listening history — we access listening-related information such as your top artists, listening history, and genres, solely to build your taste profile and recommendations. We request the minimum access needed, and you can disconnect a service at any time, both in B-Side and in that service's own settings.</p>
 
     <h3>Information collected automatically</h3>
     <ul>
-      <li><strong>Usage and device data</strong> — app interactions, device type, and diagnostics, collected through analytics and crash-reporting tools (currently <span class="placeholder">[PostHog, Sentry]</span>) to improve and stabilize the Service.</li>
-      <li><strong>Subscription data</strong> — purchase and subscription status, processed through our payments partner (currently <span class="placeholder">[RevenueCat + Apple App Store / Google Play]</span>). We do not receive or store your full payment-card details.</li>
+      <li><strong>Usage and device data</strong> — how you interact with the app, plus device type and basic diagnostics, used to operate, debug, and improve the Service.</li>
+      <li><strong>Subscription status</strong> — whether you have an active trial or subscription, so we can provide paid features. Payments are handled by the Apple App Store or Google Play; we do not receive or store your payment-card details.</li>
     </ul>
 
     <h2>2. How we use your information</h2>
     <ul>
       <li>To generate and personalize your weekly recommendations and discovery features.</li>
       <li>To create, maintain, and secure your account and subscription.</li>
-      <li>To send service-related notifications (e.g. "your new radar is ready"), subject to your notification settings.</li>
+      <li>To send service-related notifications (for example, "your new radar is ready"), subject to your notification settings.</li>
       <li>To analyze, debug, and improve the Service.</li>
-      <li>To comply with legal obligations and enforce our <a href="terms.html">Terms of Service</a>.</li>
+      <li>To comply with our legal obligations and enforce our <a href="terms.html">Terms of Service</a>.</li>
     </ul>
     <p><strong>We do not sell your personal information, and we do not use your listening data for third-party advertising.</strong></p>
 
-    <h2>3. How we share information</h2>
-    <p>We share information only with:</p>
+    <h2>3. Connected music services</h2>
+    <p>When you link Spotify, Apple Music, or Last.fm, your use of those services remains governed by <em>their</em> terms and privacy policies. We only read the data you authorize, and we never post or make changes on those accounts without your action (for example, creating a playlist you ask us to export). You can revoke B-Side's access at any time from within the app and from the service's own account settings.</p>
+
+    <h2>4. Third-party service providers</h2>
+    <p>We use a small number of trusted providers to run B-Side — for cloud hosting and authentication, subscription and payment processing, product analytics, and error/crash reporting. These providers process information only on our behalf and under our instructions, and are not permitted to use it for their own purposes. We share only what each provider needs to perform its function. A current list of our service providers is available on request at <a href="mailto:hello@trybside.com">hello@trybside.com</a>.</p>
+
+    <h2>5. How we share information</h2>
+    <p>We share information only:</p>
     <ul>
-      <li><strong>Service providers</strong> that operate the app on our behalf (e.g. <span class="placeholder">[Google Firebase</span> for hosting/auth/database, <span class="placeholder">analytics, crash reporting, payments]</span>), bound to handle data on our instructions.</li>
-      <li><strong>Music services</strong> you connect, only as needed to read the data you authorize.</li>
-      <li><strong>Legal and safety</strong> recipients when required by law or to protect rights and safety.</li>
-      <li><strong>Business transfers</strong> — in connection with a merger, acquisition, or sale of assets, subject to this Policy.</li>
+      <li>with the service providers described above, to operate the Service;</li>
+      <li>with the music services you choose to connect, as needed to read the data you authorize;</li>
+      <li>when required by law, or to protect the rights, safety, and security of our users, the public, or B-Side;</li>
+      <li>in connection with a merger, acquisition, or sale of assets, subject to this Policy.</li>
     </ul>
 
-    <h2>4. Data retention</h2>
-    <p>We keep your information for as long as your account is active or as needed to provide the Service. Raw uploaded files (such as a listening-history export) are deleted after processing. You can delete your account at any time from the app, after which we delete or de-identify your personal data within <span class="placeholder">[retention period, e.g. 30 days]</span>, except where retention is required by law.</p>
+    <h2>6. Data retention</h2>
+    <p>We retain your information for as long as your account is active. Raw files you upload (such as an exported listening history) are deleted after they are processed. You can delete your account at any time from the app's Account settings, which removes your personal data; we delete or de-identify it within 30 days, except where we are required to retain it by law.</p>
 
-    <h2>5. Your rights and choices</h2>
+    <h2>7. Security</h2>
+    <p>We use industry-standard safeguards to protect your information, including encryption in transit. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+
+    <h2>8. Children's privacy</h2>
+    <p>B-Side is not directed to children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us information, contact us and we will delete it.</p>
+
+    <h2>9. Your rights and choices</h2>
     <ul>
-      <li><strong>Access, correction, deletion</strong> — manage your data in-app or request it at <a href="mailto:hello@trybside.com">hello@trybside.com</a>. Account deletion removes your data as described above.</li>
-      <li><strong>Disconnect a service</strong> — revoke any connected music service at any time in the app and in that service's own settings.</li>
+      <li><strong>Access, correction, and deletion</strong> — manage your data in the app, or request it at <a href="mailto:hello@trybside.com">hello@trybside.com</a>. Deleting your account removes your data as described above.</li>
+      <li><strong>Disconnect a service</strong> — revoke any connected music service at any time, in the app and in that service's settings.</li>
       <li><strong>Notifications</strong> — control push notifications in your device and app settings.</li>
-      <li><strong>Regional rights</strong> — depending on where you live (e.g. EEA/UK under GDPR, or California under the CCPA/CPRA), you may have additional rights such as data portability or the right to object. Contact us to exercise them. <span class="placeholder">[Confirm applicable frameworks with counsel.]</span></li>
+      <li><strong>Regional rights</strong> — depending on where you live (for example, the EEA/UK under the GDPR, or California under the CCPA/CPRA), you may have additional rights such as data portability or the right to object to certain processing. Contact us to exercise them; we won't discriminate against you for doing so.</li>
     </ul>
 
-    <h2>6. Security</h2>
-    <p>We use industry-standard safeguards to protect your information. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+    <h2>10. International users</h2>
+    <p>We operate from the United States and process information there. If you use B-Side from outside the U.S., you consent to your information being transferred to and processed in the U.S., handled consistent with this Policy.</p>
 
-    <h2>7. Children's privacy</h2>
-    <p>The Service is not directed to children under <span class="placeholder">[13 / 16]</span>, and we do not knowingly collect their personal information. If you believe a child has provided us data, contact us and we will delete it.</p>
+    <h2>11. Changes to this Policy</h2>
+    <p>We may update this Policy from time to time. If we make material changes, we'll notify you through the app or by email, and we'll update the "Last updated" date above.</p>
 
-    <h2>8. International users</h2>
-    <p>We operate from <span class="placeholder">[country/region]</span> and may process your information there and in other countries where our providers operate. By using the Service, you consent to such transfers, handled consistent with this Policy.</p>
-
-    <h2>9. Changes to this Policy</h2>
-    <p>We may update this Policy from time to time. Material changes will be communicated through the app or by email, and the "Last updated" date above will change.</p>
-
-    <h2>10. Contact us</h2>
-    <p>Questions about this Policy or your data? Email <a href="mailto:hello@trybside.com">hello@trybside.com</a> or write to <span class="placeholder">[Berkeley Labs, mailing address]</span>.</p>
+    <h2>12. Contact</h2>
+    <p>Questions about this Policy or your data? Email us at <a href="mailto:hello@trybside.com">hello@trybside.com</a>.</p>
 
     <p style="margin-top:36px;"><a href="index.html">← Back to home</a></p>
   </main>
@@ -106,11 +109,13 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <a class="wordmark" href="index.html"><span class="wordmark__badge">B</span>B-Side</a>
-          <p class="muted" style="margin-top:10px;max-width:280px;font-size:14px;">Your favorite music is still out there.</p>
+          <a class="wordmark" href="index.html"><img class="logo-img" src="assets/wordmark.png" alt="B-Side" /></a>
+          <p class="muted" style="margin-top:12px;max-width:300px;font-size:14px;">Your favorite music is still out there. Coming soon to iOS &amp; Android.</p>
         </div>
         <div class="footer__links">
-          <a href="index.html#features">Features</a>
+          <a href="index.html#how">How it works</a>
+          <a href="index.html#radar">The Radar</a>
+          <a href="index.html#best-of">Best of Lists</a>
           <a href="index.html#faq">FAQ</a>
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
@@ -118,7 +123,7 @@
         </div>
       </div>
       <div class="footer__meta">
-        <span>© 2026 Berkeley Labs. All rights reserved.</span>
+        <span>© 2026 Berkeley Labs LLC. All rights reserved.</span>
         <span>Not affiliated with Spotify, Apple Music, or Last.fm.</span>
       </div>
     </div>
