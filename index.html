@@ -3,43 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>B-Side — Your favorite music is still out there</title>
-  <meta name="description" content="B-Side is a weekly music discovery app. Connect Spotify, Apple Music, or Last.fm and get five albums you don't know yet — but will love. Discovery only. No repeats." />
-  <meta property="og:title" content="B-Side — Your favorite music is still out there" />
-  <meta property="og:description" content="Five hand-picked albums every week from the corners of your taste. Discovery only." />
+
+  <!-- Primary SEO -->
+  <title>B-Side — Discover new music you'll actually love, every week</title>
+  <meta name="description" content="B-Side is a weekly music discovery app. Connect Spotify, Apple Music, or Last.fm and get a handpicked radar of new albums you don't know yet — plus new releases from artists you love and critics' best-of lists re-ranked for your taste. Discovery only. No repeats." />
+  <link rel="canonical" href="https://trybside.com/" />
+  <meta name="theme-color" content="#F3EAD9" />
+  <link rel="icon" href="assets/app-icon-ios.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon-ios.png" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="B-Side" />
+  <meta property="og:title" content="B-Side — Discover new music you'll actually love, every week" />
+  <meta property="og:description" content="A weekly radar of albums you don't know yet, from the edges of your own taste. New releases from artists you love + critics' best-of lists re-ranked for you." />
+  <meta property="og:url" content="https://trybside.com/" />
+  <meta property="og:image" content="https://trybside.com/assets/radar.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="B-Side — Discover new music you'll actually love" />
+  <meta name="twitter:description" content="A weekly radar of new albums from the edges of your taste. Discovery only." />
+  <meta name="twitter:image" content="https://trybside.com/assets/radar.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: app + FAQ (helps Google rich results + AI agents parse the page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "B-Side",
+    "applicationCategory": "MusicApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "B-Side is a weekly music discovery app. Connect Spotify, Apple Music, or Last.fm and receive a handpicked radar of new albums you don't already know, plus new releases from artists you love and critics' best-of lists re-ranked for your taste.",
+    "url": "https://trybside.com/",
+    "image": "https://trybside.com/assets/radar.png",
+    "offers": { "@type": "Offer", "category": "subscription" },
+    "publisher": { "@type": "Organization", "name": "Berkeley Labs" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is B-Side?", "acceptedAnswer": { "@type": "Answer", "text": "B-Side is a music discovery app that gives you a fresh, handpicked radar of new albums every week — chosen from the edges of your own taste. It also surfaces new releases from artists you already love and re-ranks critics' best-of lists for you. It focuses only on music you don't already know." } },
+      { "@type": "Question", "name": "How does B-Side decide what to recommend?", "acceptedAnswer": { "@type": "Answer", "text": "B-Side builds a taste profile from the music services you connect (Spotify, Apple Music, Last.fm) and any artists you tell it you love. It looks beyond your top artists to the genres, eras, and adjacent corners of your taste, then finds new albums that fit — never repeating a pick you've already seen." } },
+      { "@type": "Question", "name": "Which music services can I connect, and do I need a paid subscription?", "acceptedAnswer": { "@type": "Answer", "text": "You can connect Spotify, Apple Music, and/or Last.fm to shape your recommendations — connect as many as you like. To play full albums and export playlists you use your own streaming app. You can also skip connecting and just pick a few favorite artists to get started." } },
+      { "@type": "Question", "name": "How is B-Side different from Spotify's Discover Weekly?", "acceptedAnswer": { "@type": "Answer", "text": "Streaming recommendations are tuned to keep you listening to what you already like. B-Side is tuned to find what you don't know yet, never repeats a recommendation, and pulls from critics' lists and new releases — not just one platform's listening signals." } },
+      { "@type": "Question", "name": "What are New Releases in B-Side?", "acceptedAnswer": { "@type": "Answer", "text": "New Releases shows brand-new albums from artists you already love, surfaced the week they come out and kept for 60 days. It's a focused feed of just your artists' new music, not an overwhelming firehose of everything released." } },
+      { "@type": "Question", "name": "What are Best of Lists?", "acceptedAnswer": { "@type": "Answer", "text": "B-Side takes critics' year-end and best-of lists from publications like Pitchfork, Stereogum, Rolling Stone, Paste, Consequence, and The Guardian, and re-ranks each list specifically for your taste — so you see where an album landed on the critic's list and where it ranks for you, with a personal match score." } },
+      { "@type": "Question", "name": "Will adding a new music service erase my taste profile?", "acceptedAnswer": { "@type": "Answer", "text": "No. Sources are additive — each one merges in without overwriting the others. You can connect Last.fm months after Spotify and keep everything you've built; the recommendations just get sharper." } },
+      { "@type": "Question", "name": "Can I play the music and make playlists?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open any album in your default player (Spotify or Apple Music), and turn a week's radar or any list into a real playlist you can press play on." } },
+      { "@type": "Question", "name": "What platforms is B-Side available on?", "acceptedAnswer": { "@type": "Answer", "text": "B-Side is a mobile app for iOS and Android." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- ===================== NAV ===================== -->
   <header class="nav">
     <div class="container nav__inner">
-      <a class="wordmark" href="/"><span class="wordmark__badge">B</span>B-Side</a>
+      <a class="wordmark" href="/"><img class="logo-img" src="assets/wordmark.png" alt="B-Side" /></a>
       <nav class="nav__links">
         <a href="#how">How it works</a>
-        <a href="#features">Features</a>
+        <a href="#radar">The Radar</a>
+        <a href="#best-of">Best of Lists</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn--primary" href="#waitlist">Get early access</a>
+      <span class="pill">Coming soon</span>
     </div>
   </header>
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
+    <img class="deco" src="assets/icons/cassette.png" alt="" aria-hidden="true" style="top:30px;right:7%;transform:rotate(11deg);">
+    <img class="deco deco--sm" src="assets/icons/play.png" alt="" aria-hidden="true" style="bottom:48px;left:3%;transform:rotate(-9deg);">
     <div class="container hero__grid">
       <div class="hero__copy">
         <p class="eyebrow">Weekly music discovery</p>
-        <h1 class="display" style="margin:12px 0 18px;">Your favorite&nbsp;music is still out there.</h1>
-        <p class="lead">Every week, B-Side hands you five albums you don't know yet — pulled from the edges of your own taste. No charts. No re-runs of what you already play. Just the good stuff you haven't found.</p>
-        <div class="hero__cta">
-          <a class="btn btn--primary btn--lg" href="#waitlist">Get early access</a>
-          <a class="btn btn--secondary btn--lg" href="#how">See how it works</a>
+        <h1 class="display" style="margin:12px 0 18px;">Your favorite music is still out there.</h1>
+        <p class="lead">Every week, B-Side hands you a radar of new albums you don't know yet — pulled from the edges of your own taste. No charts. No replaying what you've already worn out. Just the good stuff you haven't found.</p>
+        <div class="store-btns">
+          <!-- TODO: set href to the real App Store listing URL once the app is live -->
+          <a class="store-btn store-btn--orange" href="#" aria-label="Download B-Side on the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 14.99 3.51 7.66 8.5 7.4c1.31.07 2.22.74 3 .77.93-.16 1.82-.74 3.04-.74.92.1 2.65.39 3.51 1.5-2.95 1.74-2.4 5.9.04 7.35-.31.7-.72 1.47-1.04 1.94zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            <span class="store-btn__txt"><small>Download on the</small><b>App Store</b></span>
+          </a>
+          <!-- TODO: set href to the real Google Play listing URL once the app is live -->
+          <a class="store-btn store-btn--teal" href="#" aria-label="Get B-Side on Google Play">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4a1.4 1.4 0 0 0-.6 1.16v16.88c0 .47.23.9.6 1.16l9.2-9.6L3.6 2.4zM16.3 8.9 5.9 3.05l8.5 8.85 1.9-3zM18.9 11.2l-2.1-1.2-2.1 2.2 2.1 2.2 2.1-1.2c.8-.5.8-1.7 0-2.2zM5.9 20.95 16.3 15.1l-1.9-3-8.5 8.85z"/></svg>
+            <span class="store-btn__txt"><small>Get it on</small><b>Google Play</b></span>
+          </a>
         </div>
-        <p class="hero__note muted">Connect the music you already use. Cancel anytime.</p>
+        <p class="hero__note muted">Coming soon to iOS &amp; Android — <a href="#how">see how it works ↓</a></p>
         <div class="sources-strip">
           <span>Works with</span>
           <span class="source-chip">Spotify</span>
@@ -47,32 +107,9 @@
           <span class="source-chip">Last.fm</span>
         </div>
       </div>
-
-      <!-- phone mockup -->
       <div class="hero__visual">
-        <div class="phone">
-          <div class="phone__screen">
-            <div class="phone__top">
-              <small>This week's radar</small>
-              5 new for you
-            </div>
-            <div class="phone__body">
-              <div class="rec-card plate" style="background:var(--bs-surface);">
-                <span class="badge" style="background:var(--bs-teal);color:#14323A;">Side Door</span>
-                <div class="art" style="background:var(--bs-paper-2);">album art</div>
-                <div class="title">Ghost Notes</div>
-                <div class="artist">The Reverb Club</div>
-                <div class="why">Because you keep Khruangbin and Men I Trust on repeat.</div>
-              </div>
-              <div class="rec-card plate" style="background:var(--bs-surface);">
-                <span class="badge" style="background:var(--bs-orange);color:#fff;">Buzz</span>
-                <div class="art" style="background:var(--bs-paper-2);">album art</div>
-                <div class="title">Slow Tide</div>
-                <div class="artist">Marlowe Fields</div>
-                <div class="why">Critics won't shut up about it — and it's your kind of weird.</div>
-              </div>
-            </div>
-          </div>
+        <div class="device device--tilt">
+          <img src="assets/radar.png" alt="The B-Side weekly Radar: five new albums with category badges and a one-line reason for each pick." />
         </div>
       </div>
     </div>
@@ -80,6 +117,8 @@
 
   <!-- ===================== HOW IT WORKS ===================== -->
   <section class="section" id="how" style="background:var(--bg-grouped);border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);">
+    <img class="deco" src="assets/icons/lightning.png" alt="" aria-hidden="true" style="top:38px;right:6%;transform:rotate(13deg);">
+    <img class="deco deco--sm" src="assets/icons/headphones.png" alt="" aria-hidden="true" style="bottom:34px;left:4%;transform:rotate(-11deg);">
     <div class="container">
       <p class="eyebrow">How it works</p>
       <h2 class="h2" style="margin-top:10px;">Three steps. Then it just shows up.</h2>
@@ -96,38 +135,116 @@
         </div>
         <div class="step plate plate--rivets">
           <div class="step__n">3</div>
-          <h3 class="h3">Get five new albums a week</h3>
-          <p>A fresh radar every week, each pick with a one-line reason. Play it in your app of choice, or export the whole thing as a playlist.</p>
+          <h3 class="h3">Get a fresh radar every week</h3>
+          <p>New albums you don't know, each with a one-line reason. Play them in your app of choice, or export the whole radar as a playlist.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FEATURES ===================== -->
-  <section class="section" id="features">
+  <!-- ===================== SPOTLIGHT FEATURES ===================== -->
+  <section class="section" id="radar">
+    <img class="deco" src="assets/icons/antenna.png" alt="" aria-hidden="true" style="top:70px;left:2%;transform:rotate(-8deg);">
+    <img class="deco deco--sm" src="assets/icons/star.png" alt="" aria-hidden="true" style="top:42%;right:3%;transform:rotate(15deg);">
+    <img class="deco deco--sm" src="assets/icons/heart.png" alt="" aria-hidden="true" style="bottom:90px;left:5%;transform:rotate(9deg);">
+    <img class="deco" src="assets/icons/rewind.png" alt="" aria-hidden="true" style="top:68%;right:5%;transform:rotate(-6deg);">
     <div class="container">
-      <p class="eyebrow">What's inside</p>
+
+      <!-- The Radar -->
+      <div class="spotlight">
+        <div class="spotlight__media">
+          <div class="device device--tilt-l"><img src="assets/radar.png" alt="The weekly Radar with five categorized album recommendations." /></div>
+        </div>
+        <div class="spotlight__copy">
+          <p class="eyebrow spotlight__eyebrow">
+            <svg class="line-icon spotlight__icon" viewBox="0 0 24 24"><path d="M12 12v0"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M6 6a9 9 0 0 0 0 12M18 6a9 9 0 0 1 0 12"/></svg>
+            The Radar
+          </p>
+          <h2 class="h2" style="margin-top:10px;">Five new albums a week, and a reason for each.</h2>
+          <p class="lead">Your radar is pure discovery — we never recommend what you already play, and once you've seen a pick, you'll never see it twice. Every album comes tagged with why it's here: a closest match, a side door, a gateway into an artist, or an adventurous pick to stretch you.</p>
+          <ul>
+            <li>Discovery only — no repeats, ever</li>
+            <li>Categorized picks so you know what kind of leap each one is</li>
+            <li>A one-line reason tied to <em>your</em> taste</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- New Releases -->
+      <div class="spotlight spotlight--rev spotlight--teal">
+        <div class="spotlight__media">
+          <div class="device device--tilt"><img src="assets/new-releases.png" alt="New Releases feed: brand-new albums from artists you already love, grouped by month." /></div>
+        </div>
+        <div class="spotlight__copy">
+          <p class="eyebrow spotlight__eyebrow" style="color:var(--bs-teal-deep);">
+            <svg class="line-icon spotlight__icon" viewBox="0 0 24 24"><path d="M5 3v18l5-4 5 4V3"/><path d="M19 5l-2 2 2 2"/></svg>
+            New Releases
+          </p>
+          <h2 class="h2" style="margin-top:10px;">Never miss a drop from an artist you love.</h2>
+          <p class="lead">The moment an artist in your world puts out something new, it lands here — fresh releases from the past 60 days, newest first. It's a focused feed of just your artists' new music. Not the everything-firehose. Tap any one to play it in your default player.</p>
+          <ul>
+            <li>New albums from artists you already love</li>
+            <li>Surfaced the week they release, kept for 60 days</li>
+            <li>One tap to play in Spotify or Apple Music</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Best of Lists -->
+      <div class="spotlight spotlight--yellow" id="best-of">
+        <div class="spotlight__media">
+          <div class="device device--tilt-l"><img src="assets/best-of-lists.png" alt="Best of Lists: a critic's best-of list re-ranked for your taste, showing each album's rank on the list, its rank for you, and a match score." /></div>
+        </div>
+        <div class="spotlight__copy">
+          <p class="eyebrow spotlight__eyebrow" style="color:var(--bs-orange-deep);">
+            <svg class="line-icon spotlight__icon" viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>
+            Best of Lists
+          </p>
+          <h2 class="h2" style="margin-top:10px;">The critics' best-of, re-ranked for you.</h2>
+          <p class="lead">Pitchfork, Stereogum, Rolling Stone, Paste, Consequence, The Guardian — we take their best-of lists and re-sort every one by how well each album fits <em>you</em>. You see where it landed on the critic's list <em>and</em> where it ranks for your taste, with a personal match score. "<strong>#23 on Pitchfork · #1 for you.</strong>"</p>
+          <ul>
+            <li>Major publications' year-end &amp; best-of lists</li>
+            <li>Re-ranked for your taste with a match score</li>
+            <li>See the critic's rank and your rank, side by side</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Album detail / Why it matters -->
+      <div class="spotlight spotlight--rev">
+        <div class="spotlight__media">
+          <div class="device device--tilt"><img src="assets/album-why-2.PNG" alt="An album detail page: why this album matters for your taste, plus context on the artist." /></div>
+        </div>
+        <div class="spotlight__copy">
+          <p class="eyebrow spotlight__eyebrow">Why it matters</p>
+          <h2 class="h2" style="margin-top:10px;">Not just <em>what</em> to play — why you'll like it.</h2>
+          <p class="lead">Open any album and you get the real story: why it fits your taste, the standout tracks worth starting with, and context on the artist and the moment it came from. Then play it in Spotify or Apple Music, save it for later, or add it to a list — one tap each.</p>
+          <ul>
+            <li>A personal "why it matters" for every album</li>
+            <li>Tracklist with the most-popular songs flagged</li>
+            <li>Open in your player, save, or add to a list</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SECONDARY FEATURES ===================== -->
+  <section class="section" style="background:var(--bg-grouped);border-top:1.5px solid var(--border);border-bottom:1.5px solid var(--border);">
+    <div class="container">
+      <p class="eyebrow">More of what's inside</p>
       <h2 class="h2" style="margin-top:10px;">Built for finding, not for charts.</h2>
       <div class="features">
-        <div class="feature plate">
-          <span class="feature__tag t-teal"></span>
-          <h3 class="h3">Discovery only</h3>
-          <p>We never recommend what you already play. Every pick is something new — and once you've seen it, you'll never see it twice.</p>
-        </div>
         <div class="feature plate">
           <span class="feature__tag t-orange"></span>
           <h3 class="h3">Your taste, from every source</h3>
           <p>Spotify, Apple Music, and Last.fm merge into one profile. Add a new source later and nothing you've built gets lost.</p>
         </div>
         <div class="feature plate">
-          <span class="feature__tag t-yellow"></span>
-          <h3 class="h3">Critics' best-of, ranked for you</h3>
-          <p>Pitchfork, Stereogum, Rolling Stone and more — re-sorted by how well each album fits <em>you</em>, not just where it landed on their list.</p>
-        </div>
-        <div class="feature plate">
-          <span class="feature__tag t-pink"></span>
-          <h3 class="h3">Fresh drops you'd actually want</h3>
-          <p>New releases from artists you already love, surfaced the week they land — never a firehose, just yours.</p>
+          <span class="feature__tag t-teal"></span>
+          <h3 class="h3">Discovery only</h3>
+          <p>We never recommend what you already play, and never repeat a pick. Every album is something genuinely new.</p>
         </div>
         <div class="feature plate">
           <span class="feature__tag t-mint"></span>
@@ -135,9 +252,19 @@
           <p>Open any pick in your default player, or turn a week's radar — or any list — into a real playlist you can press play on.</p>
         </div>
         <div class="feature plate">
-          <span class="feature__tag t-navy"></span>
+          <span class="feature__tag t-pink"></span>
+          <h3 class="h3">Lists &amp; saves</h3>
+          <p>Keep a running stack of what you want to hear next. Save from anywhere, organize into lists, export when you're ready.</p>
+        </div>
+        <div class="feature plate">
+          <span class="feature__tag t-yellow"></span>
           <h3 class="h3">Dial it in</h3>
-          <p>Too safe? Too far out? Tell each pick what you think and the next radar adjusts. It learns the way you actually listen.</p>
+          <p>Too safe? Too far out? Tell each pick what you think and the next radar adjusts to how you actually listen.</p>
+        </div>
+        <div class="feature plate">
+          <span class="feature__tag t-navy"></span>
+          <h3 class="h3">Weekly, on your day</h3>
+          <p>A fresh radar arrives each week with a notification — no doomscrolling for something to play.</p>
         </div>
       </div>
     </div>
@@ -145,10 +272,12 @@
 
   <!-- ===================== PITCH BAND ===================== -->
   <section class="section band">
+    <img class="deco deco--lg" src="assets/icons/boombox-system.png" alt="" aria-hidden="true" style="bottom:-10px;left:2%;transform:rotate(-4deg);filter:invert(1);opacity:0.10;">
     <div class="container band__grid">
       <div>
         <p class="eyebrow" style="color:var(--bs-orange-soft);">Why B-Side</p>
         <h2 class="h2" style="margin-top:10px;">The algorithm feeds you more of the same. We don't.</h2>
+        <img class="cassette cassette--tilt" src="assets/splash-logo.png" alt="The B-Side cassette" style="margin-top:28px;max-width:320px;" />
       </div>
       <div>
         <p class="lead">Streaming got really good at playing you what you already like. B-Side is for the other thing — the dusty crate, the record-store clerk's "oh, you'll love this," the flip side of the single. We do one job: put genuinely new music in front of you, every week, and make it easy to play.</p>
@@ -159,63 +288,78 @@
 
   <!-- ===================== FAQ ===================== -->
   <section class="section" id="faq">
+    <img class="deco deco--sm" src="assets/icons/pencil.png" alt="" aria-hidden="true" style="top:50px;left:5%;transform:rotate(-12deg);">
+    <img class="deco" src="assets/icons/envelope.png" alt="" aria-hidden="true" style="bottom:60px;right:5%;transform:rotate(9deg);">
     <div class="container">
       <p class="eyebrow" style="text-align:center;">Questions</p>
       <h2 class="h2" style="text-align:center;margin-top:10px;">Good to know</h2>
       <div class="faq">
-        <details>
-          <summary>Do I need a paid Spotify or Apple Music account?</summary>
-          <p>You can connect any of Spotify, Apple Music, or Last.fm to shape your taste. To <em>play</em> full albums and export playlists you'll use your own streaming app, so a subscription there helps — but you can browse and discover either way. You can also skip connecting and just pick a few favorite artists to start.</p>
+        <details open>
+          <summary>What is B-Side?</summary>
+          <p>B-Side is a music discovery app that gives you a fresh, handpicked radar of new albums every week — chosen from the edges of your own taste. It also surfaces new releases from artists you already love and re-ranks critics' best-of lists for you. The whole point is music you <em>don't</em> already know.</p>
         </details>
         <details>
-          <summary>How is this different from Discover Weekly or my streaming app's recommendations?</summary>
-          <p>Those are tuned to keep you listening to what you already like. B-Side is tuned to find what you <em>don't</em> know yet — and it never repeats a pick. It also pulls from critics' lists and new releases, not just one platform's catalog signals.</p>
+          <summary>How does B-Side decide what to recommend?</summary>
+          <p>It builds a taste profile from the services you connect and the artists you tell it you love, then looks beyond your top artists to the genres, eras, and adjacent corners of your taste to find new albums that fit. It never repeats a pick you've already seen.</p>
+        </details>
+        <details>
+          <summary>Which services can I connect, and do I need a paid subscription?</summary>
+          <p>You can connect Spotify, Apple Music, and/or Last.fm to shape your recommendations — as many as you like. To play full albums and export playlists, you use your own streaming app. You can also skip connecting and just pick a few favorite artists to start.</p>
+        </details>
+        <details>
+          <summary>How is this different from Discover Weekly?</summary>
+          <p>Those are tuned to keep you listening to what you already like. B-Side is tuned to find what you <em>don't</em> know yet, never repeats a pick, and pulls from critics' lists and new releases — not just one platform's listening signals.</p>
+        </details>
+        <details>
+          <summary>What are New Releases?</summary>
+          <p>A focused feed of brand-new albums from artists you already love, surfaced the week they drop and kept for 60 days — newest first. Just your artists' new music, not a firehose of everything released.</p>
+        </details>
+        <details>
+          <summary>What are Best of Lists?</summary>
+          <p>We take critics' best-of lists (Pitchfork, Stereogum, Rolling Stone, Paste, Consequence, The Guardian and more) and re-rank each one for your taste — showing the critic's rank, your rank, and a personal match score for every album.</p>
         </details>
         <details>
           <summary>Will adding a new music service erase my taste profile?</summary>
-          <p>No. Sources are additive — each one merges in without overwriting the others. Connect Last.fm months after Spotify and you keep everything you've built; the picks just get sharper.</p>
+          <p>No. Sources are additive — each merges in without overwriting the others. Connect Last.fm months after Spotify and you keep everything you've built; the picks just get sharper.</p>
+        </details>
+        <details>
+          <summary>Can I play the music and make playlists?</summary>
+          <p>Yes. Open any album in your default player (Spotify or Apple Music), and turn a week's radar or any list into a real playlist you can press play on.</p>
         </details>
         <details>
           <summary>What does it cost?</summary>
-          <p><span class="placeholder">[Pricing copy — fill in: trial length + monthly/annual price.]</span> You can cancel anytime.</p>
+          <p><span class="placeholder">[Pricing copy — fill in: trial length + monthly/annual price.]</span> Cancel anytime.</p>
         </details>
         <details>
           <summary>What do you do with my listening data?</summary>
-          <p>We use it only to build your recommendations — never sold, never shared for advertising. See our <a href="privacy.html">Privacy Policy</a> for the details, and delete your account (and data) anytime from the app.</p>
+          <p>We use it only to build your recommendations — never sold, never shared for advertising. See our <a href="privacy.html">Privacy Policy</a> for details, and delete your account and data anytime from the app.</p>
+        </details>
+        <details>
+          <summary>What platforms is B-Side on?</summary>
+          <p>B-Side is a mobile app for iOS and Android. <span class="placeholder">[Add store links when live.]</span></p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FINAL CTA ===================== -->
-  <section class="section section--tight cta-final" id="waitlist" style="background:var(--bg-grouped);border-top:1.5px solid var(--border);">
-    <div class="container">
-      <h2 class="display">Find your next favorite.</h2>
-      <p class="lead" style="max-width:560px;margin:0 auto;">Be first in line when B-Side opens up. Drop your email and we'll let you know the moment it's ready.</p>
-      <!-- TODO: wire this form to your email provider (Mailchimp / ConvertKit / Firebase). Currently inert. -->
-      <form class="waitlist" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.nextElementSibling.style.display='block';">
-        <input type="email" placeholder="you@email.com" required aria-label="Email address" />
-        <button class="btn btn--primary" type="submit">Notify me</button>
-      </form>
-      <p class="hand" style="display:none;margin-top:14px;">Thanks — you're on the list. ✶</p>
-    </div>
-  </section>
-
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
+    <img class="deco deco--sm" src="assets/icons/fast-forward.png" alt="" aria-hidden="true" style="top:30px;right:8%;transform:rotate(8deg);">
     <div class="container">
       <div class="footer__grid">
         <div>
-          <a class="wordmark" href="/"><span class="wordmark__badge">B</span>B-Side</a>
-          <p class="muted" style="margin-top:10px;max-width:280px;font-size:14px;">Your favorite music is still out there.</p>
+          <a class="wordmark" href="/"><img class="logo-img" src="assets/wordmark.png" alt="B-Side" /></a>
+          <p class="muted" style="margin-top:12px;max-width:300px;font-size:14px;">Your favorite music is still out there. Coming soon to iOS &amp; Android.</p>
+          <img class="cassette cassette--sm cassette--tilt" src="assets/splash-logo.png" alt="The B-Side cassette" style="margin-top:18px;" />
         </div>
         <div class="footer__links">
           <a href="#how">How it works</a>
-          <a href="#features">Features</a>
+          <a href="#radar">The Radar</a>
+          <a href="#best-of">Best of Lists</a>
           <a href="#faq">FAQ</a>
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
-          <a href="mailto:hello@bside.app">Contact</a>
+          <a href="mailto:hello@trybside.com">Contact</a>
         </div>
       </div>
       <div class="footer__meta">

@@ -293,11 +293,99 @@ a:hover { text-decoration: underline; }
 .legal li { margin-bottom: 7px; }
 .legal .placeholder { background: rgba(228,87,46,0.12); padding: 1px 5px; border-radius: 4px; font-style: italic; color: var(--bs-orange-deep); }
 
+/* ---------- brand wordmark / logo img ---------- */
+.logo-img { height: 30px; width: auto; display: block; }
+.app-icon-img { width: 34px; height: 34px; border-radius: 8px; border: 1.5px solid var(--border); }
+
+/* ---------- device frame (holds a real screenshot) ---------- */
+.device {
+  position: relative; width: 280px; margin: 0 auto;
+  background: var(--bs-ink); border: 1.5px solid var(--border);
+  border-radius: 40px; padding: 10px; box-shadow: var(--shadow-lg);
+}
+.device::before { /* speaker notch */
+  content: ""; position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+  width: 54px; height: 5px; border-radius: 3px; background: rgba(243,234,217,0.25); z-index: 2;
+}
+.device img { display: block; width: 100%; border-radius: 30px; }
+.device--tilt { transform: rotate(2.2deg); }
+.device--tilt-l { transform: rotate(-2.2deg); }
+
+/* small store badges / pills */
+.pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-display); font-weight: 600; font-size: 13px;
+  letter-spacing: var(--tracking-caps); text-transform: uppercase;
+  padding: 8px 14px; border: 1.5px solid var(--border); border-radius: var(--r-pill);
+  background: var(--bs-yellow); color: #3A2C08; box-shadow: var(--shadow-sm);
+}
+
+/* ---------- feature spotlight (alternating screenshot + copy) ---------- */
+.spotlight { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+.spotlight + .spotlight { margin-top: 88px; }
+.spotlight--rev .spotlight__media { order: 2; }
+.spotlight__eyebrow { display: inline-flex; align-items: center; gap: 8px; }
+.spotlight__icon { width: 22px; height: 22px; }
+.spotlight ul { margin: 18px 0 0 0; list-style: none; display: grid; gap: 12px; }
+.spotlight li { position: relative; padding-left: 26px; color: var(--text-secondary); }
+.spotlight li::before {
+  content: ""; position: absolute; left: 0; top: 8px; width: 11px; height: 11px;
+  background: var(--bs-orange); border: 1.5px solid var(--border); border-radius: 3px; transform: rotate(45deg);
+}
+.spotlight--teal li::before { background: var(--bs-teal); }
+.spotlight--yellow li::before { background: var(--bs-yellow); }
+
+/* hand-drawn line icon (inline svg) inherits ink */
+.line-icon { stroke: var(--bs-ink); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- app-store download buttons ---------- */
+.store-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+.store-btn {
+  display: inline-flex; align-items: center; gap: 11px;
+  color: #fff; /* overridden per-variant */
+  border: 1.5px solid var(--border); border-radius: var(--r-md);
+  padding: 10px 20px; min-height: 58px; box-shadow: var(--shadow-md);
+  transition: transform .04s ease, box-shadow .12s ease;
+}
+.store-btn:hover { text-decoration: none; box-shadow: var(--shadow-lg); }
+.store-btn:active { transform: translateY(1px); box-shadow: var(--inset); }
+.store-btn svg { width: 25px; height: 25px; fill: currentColor; flex-shrink: 0; }
+.store-btn__txt { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.store-btn__txt small {
+  font-family: var(--font-body); font-weight: 600; font-size: 10px;
+  letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85;
+}
+.store-btn__txt b { font-family: var(--font-display); font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+/* colorful variants */
+.store-btn--orange { background: var(--bs-orange); color: #fff; }
+.store-btn--teal   { background: var(--bs-teal);   color: #14323A; }
+
+/* ---------- cassette logo (the splash artwork) ---------- */
+.cassette {
+  display: block; width: 100%; max-width: 360px; height: auto;
+  border: 1.5px solid var(--border); border-radius: var(--r-md); box-shadow: var(--shadow-lg);
+}
+.cassette--tilt { transform: rotate(-2.5deg); }
+.cassette--sm { max-width: 150px; box-shadow: var(--shadow-md); }
+
+/* ---------- scattered decorative icons (funky marginalia) ---------- */
+.section, .hero, .band, .footer { position: relative; overflow: hidden; }
+.container { position: relative; z-index: 1; }
+.deco {
+  position: absolute; z-index: 0; pointer-events: none; user-select: none;
+  width: 76px; height: auto; opacity: 0.12;
+}
+.deco--lg { width: 120px; opacity: 0.10; }
+.deco--sm { width: 56px; }
+
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .hero__grid, .band__grid { grid-template-columns: 1fr; gap: 40px; }
   .hero__visual { order: -1; }
   .steps, .features { grid-template-columns: 1fr; }
+  .spotlight { grid-template-columns: 1fr; gap: 32px; }
+  .spotlight--rev .spotlight__media { order: -1; }
+  .spotlight + .spotlight { margin-top: 56px; }
   .nav__links { display: none; }
   .section { padding: 64px 0; }
 }
