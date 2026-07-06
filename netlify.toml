@@ -18,3 +18,16 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Apple requires the app-site-association served as JSON (it has no extension).
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+
+# One-click email unsubscribe → the Cloud Function (proxied so the URL stays trybside.com).
+[[redirects]]
+  from = "/unsubscribe"
+  to = "https://us-central1-bside-1e8b9.cloudfunctions.net/unsubscribeEmail"
+  status = 200
+  force = true
