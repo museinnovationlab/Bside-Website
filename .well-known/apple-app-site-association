@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["DM93DYTY8K.com.berkeleylabs.bside"],
+        "components": [
+          {
+            "/": "/radar",
+            "comment": "Weekly radar-ready email deep link"
+          },
+          {
+            "/": "/radar/*",
+            "comment": "Radar sub-paths"
+          }
+        ]
+      }
+    ]
+  }
+}

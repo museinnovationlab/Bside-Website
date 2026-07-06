@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.berkeleylabs.bside",
+      "sha256_cert_fingerprints": [
+        "93:92:61:D7:98:13:AD:EC:A5:F2:F3:BD:4A:1E:3E:5D:C6:8F:4E:79:5D:F0:4F:F4:BE:1E:97:67:DD:17:EC:B3"
+      ]
+    }
+  }
+]
